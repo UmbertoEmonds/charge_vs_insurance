@@ -1,72 +1,75 @@
-# 🩺 Assurance Prédiction : Semaine 1 - Analyse Exploratoire (EDA)
+# 🩺 Insurance Cost Prediction
 
-## 📌 Présentation du Projet
+## 📌 Project Overview
 
-Dans le cadre de ce projet "Dev Data IA", nous accompagnons un assureur pour mieux comprendre les facteurs influençant les charges médicales. Cette première semaine est dédiée à l'**Exploration des Données (EDA)** afin d'identifier les variables clés et de valider nos hypothèses métier avant la modélisation.
+As part of this "AI Data Development" project, we are assisting an insurer in better understanding the factors influencing medical costs.
 
-## 🎯 Objectifs
+We worked on **Data Exploration (EDA)** to identify key variables and validate our business hypotheses, and we carried out our linear regression project.
 
-* **Audit de qualité :** Identifier les valeurs manquantes, les doublons et vérifier le typage des données.
-* **Analyse Univariée :** Comprendre la distribution de chaque variable (Âge, IMC, Charges, etc.).
-* **Analyse Bivariée :** Étudier l'impact des variables (ex: fumeur, région) sur le montant des charges.
-* **Étude de Corrélation :** Calculer les coefficients de Pearson/Spearman pour quantifier les relations linéaires.
-* **Génération d'Insights :** Extraire 5 à 10 conclusions actionnables pour le métier.
-* **Objectif final** : concevoir un modèle IA à régression linéaire pour prédire les charges d'assurance, en se basant sur des données démographiques et médicales
+## 🎯 Objectives
 
-## 📂 Structure du Dépôt (S1)
+* **Quality Audit:** Identify missing values, duplicates, and verify data typing.
+
+* **Univariate Analysis:** Understand the distribution of each variable (Age, BMI, Costs, etc.).
+
+* **Bivariate Analysis:** Study the impact of variables (e.g., smoker, region) on the cost amount.
+
+* **Correlation Study:** Calculate Pearson/Spearman coefficients to quantify linear relationships.
+
+* **Generating Insights:** Extract 5 to 10 actionable conclusions for the business.
+
+* **Final Objective:** Design a linear regression AI model to predict insurance costs, based on demographic and medical data.
+
+## 📂 Repository Structure (S1)
 
 ```text
-├── data/
-│   └── insurance.csv          # Dataset original (Kaggle)
-├── notebooks/
-│   └── S1_Exploration.ipynb   # Analyse détaillée et graphiques
-├── reports/
-│   └── S1_Presentation.pdf    # Slides de synthèse (Fin de semaine)
-├── requirements.txt           # Bibliothèques nécessaires
-└── README.md
-
+├── dataset/
+│ └── insurance.csv # Original dataset (Kaggle)
+├── insurance.ipynb # EDA
+├── insurance_regression.ipynb # Machine Learning model
+├── requirements.txt # Mandatory libraries
+└── readme.md
 ```
 
-## 🛠️ Installation et Configuration
+## 🛠️ Installation and Configuration
 
-Pour reproduire les analyses de ce notebook :
+To reproduce the analyses in this notebook:
 
-1. **Cloner le repo :**
-```bash
+1. **Clone the repository:**
+```
 git clone https://github.com/UmbertoEmonds/charge_vs_insurance
 ```
 
+2. **Install the dependencies:**
 
-2. **Installer les dépendances :**
-```bash
+```
 pip install -r requirements.txt
 ```
 
-
-3. **Lancer le Notebook :**
+3. **Launch the Notebook:**
 ```bash
 jupyter notebook notebooks/S1_Exploration.ipynb
-
 ```
 
+## 📊 Initial Observations Overview
 
+* **Distribution of Charges:** The target variable exhibits a strong right skew (a few individuals have very high charges).
 
-## 📊 Aperçu des Premiers Constats (Extraits)
+* **Smoker Factor:** Smokers have a significantly higher median charge than non-smokers.
 
-* **Distribution des charges :** La variable cible présente une forte asymétrie à droite (quelques individus ont des charges très élevées).
-* **Facteur tabac :** Les fumeurs présentent une médiane de charges nettement supérieure aux non-fumeurs.
-* **Corrélation IMC/Charges :** Une tendance se dessine, particulièrement forte chez les individus avec un IMC > 30.
-* **Corrélation linéaire âge-charges** indépendante des autres paramètres
+* **BMI/Charges:** A trend is emerging, particularly strong in individuals with a BMI > 30.
 
-## 🧪 Hypothèses pour la Semaine 2
+## 🧪 Modeling
 
-Basé sur cette EDA, nous prévoyons pour la phase de modélisation :
+Based on this EDA, we plan the following for the modeling phase:
 
-1. **Transformation Log :** Appliquer `np.log(charges)` pour normaliser la cible.
-2. **Feature Engineering :** Créer une variable binaire `is_obese` (IMC > 30).
-3. **Encodage :** Utiliser le *One-Hot Encoding* pour les variables `smoker` et `sex`.
+1. **Log Transformation:** Apply `np.log(weight)` to normalize the target.
 
-## 👥 L'Équipe
+2. **Feature Engineering:** Create a binary variable `is_obese` (BMI > 30).
+
+3. **Encoding:** Use One-Hot Encoding for the `region` variables.
+
+## 👥 The Team
 
 * **Flora**
 * **Fatima**
