@@ -1,0 +1,21 @@
+{
+    "model_name": "Prédicteur de charges d’assurance",
+    "model_type": "LinearRegression",
+    "training_date": "2026-01-21 16:31:19",
+    "sklearn_version": "1.8.0",
+    "features": [
+        "age",
+        "sex",
+        "bmi",
+        "children",
+        "smoker",
+        "region"
+    ],
+    "preprocessing": [
+        "Feature engineering (smoker, smoker_obese)",
+        "OrdinalEncoder (binary features)",
+        "OneHotEncoder (categorical features)",
+        "RobustScaler (numerical features)"
+    ],
+    "description": "Pipeline complet avec feature engineering et régression linéaire"
+}
