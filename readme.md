@@ -54,6 +54,11 @@ jupyter notebook insurance_eda.ipynb
 jupyter notebook insurance_linear_regression.ipynb
 ```
 
+4. **Launch MLFlow**
+```bash
+mlflow ui
+```
+
 ## 📊 Initial Observations Overview
 
 * **Distribution of Charges:** The target variable exhibits a strong right skew (a few individuals have very high charges).
