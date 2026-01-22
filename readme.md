@@ -52,6 +52,7 @@ pip install -r requirements.txt
 ```bash
 jupyter notebook insurance_eda.ipynb
 jupyter notebook insurance_linear_regression.ipynb
+jupyter notebook insurance_pipeline.ipynb
 ```
 
 4. **Launch MLFlow**
@@ -81,11 +82,11 @@ Based on this EDA, we applied the following plan for the modeling phase:
 
 1. **Delete region feature**
 
-2. **Feature Engineering:** Create a binary variable `is_obese` (BMI > 30). Add interactions `smoker * bmi` and `smoker * is_obese`.
+2. **Feature Engineering:** Create a binary variable `is_obese` (BMI > 30). Add interaction `smoker * is_obese`.
 
 3. **Logarithm transformation:** Compare with and without `log(charges)`. We chose not to use it.
 
-4. **Standardisation:** Scaled numerical features `age` and `children` after split to avoid data leak.
+4. **Standardisation:** Scale numerical features after split to avoid data leak.
 
 ## 👥 The Team
 
