@@ -59,6 +59,14 @@ jupyter notebook insurance_linear_regression.ipynb
 mlflow ui
 ```
 
+## ▶️ Make new predictions
+
+#### Launch Streamlit to make predictions using the UI
+
+```bash
+streamlit run ./streamlit/streamlit.py
+```
+
 ## 📊 Initial Observations Overview
 
 * **Distribution of Charges:** The target variable exhibits a strong right skew (a few individuals have very high charges).
