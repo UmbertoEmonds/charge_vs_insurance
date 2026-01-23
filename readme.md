@@ -37,6 +37,15 @@ We worked on **Data Exploration (EDA)** to identify key variables and validate o
 ```text
 ├── dataset/
 │ └── insurance.csv # Original dataset (Kaggle)
+├── models/
+│ └── insurance_model.pkl # Saved model (with Joblib)
+│ └── regression_model_metadata.json # Saved model metadata
+├── presentations/
+│ └── 1_Insurance_EDA.pdf # Presentation of data analysis
+│ └── 2_Insurance_first_model.pdf # Presentation of first model
+│ └── 3_Insurance_final_model.pdf # Presentation of final model
+├── streamlit/
+│ └── streamlit.py # Model demo (Streamlit)
 ├── insurance_eda.ipynb # EDA
 ├── insurance_linear_regression.ipynb # Machine Learning model
 ├── requirements.txt # Mandatory libraries
