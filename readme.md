@@ -10,15 +10,27 @@ We worked on **Data Exploration (EDA)** to identify key variables and validate o
 
 * **Quality Audit:** Identify missing values, duplicates, and verify data typing.
 
-* **Univariate Analysis:** Understand the distribution of each variable (Age, BMI, Costs, etc.).
+* **Analysis**
 
-* **Bivariate Analysis:** Study the impact of variables (e.g., smoker, region) on the cost amount.
+  * **Univariate Analysis:** Understand the distribution of each variable (Age, BMI, Costs, etc.).
 
-* **Correlation Study:** Calculate coefficients (Pearson method) to quantify linear relationships.
+  * **Bivariate Analysis:** Study the impact of variables (e.g., smoker, region) on the cost amount.
 
-* **Generating Insights:** Extract 5 to 10 actionable conclusions for the business.
+  * **Correlation Study:** Calculate coefficients (Pearson method) to quantify linear relationships.
 
-* **Final Objective:** Design a linear regression AI model to predict insurance costs, based on demographic and medical data.
+  * **Generating Insights:** Extract 5 to 10 actionable conclusions for the business.
+
+* **Modelisation**
+
+  * **Final Objective:** Create a linear regression AI model to predict insurance costs, based on demographic and medical data.
+
+  * **Automatised modelisation:** Implement an automatised pipeline to handle data (feature engineering, data scaling) and apply model.
+
+  * **Strong evaluation:** Use cross validation and try different linear regression models to chose the most efficient final model.
+
+  * **Industrialised model:** Save model to easily reuse it for further deployment.
+
+  * **Prediction demo:** Design a Streamlit UI to predict insurance costs for new clients.
 
 ## 📂 Repository Structure
 
@@ -82,11 +94,23 @@ Based on this EDA, we applied the following plan for the modeling phase:
 
 1. **Delete region feature**
 
-2. **Feature Engineering:** Create a binary variable `is_obese` (BMI > 30). Add interaction `smoker * is_obese`.
+2. **Feature Engineering:** Create a binary variable `is_obese` (BMI > 30). Add interaction `smoker * is_obese`. Convert `age` to squared `age`.
 
-3. **Logarithm transformation:** Compare with and without `log(charges)`. We chose not to use it.
+3. **Logarithm transformation:** Compare with and without `log(charges)`. We chose not to use it, since feature engineering already handles the asymetry of `charges` feature.
 
 4. **Standardisation:** Scale numerical features after split to avoid data leak.
+
+5. **LinearRegression model:** Most efficient linear regression model.
+
+## 🚀 What's next ?
+
+1. **Deployment**
+
+2. **Mistakes analysis:** Some costs are highly undervaluated by our model, we need to understand why.
+
+3. **Increase training data:** Very few data currently (1337), more data could highlight other tendencies and improve model performance.
+
+4. **New features analysis:** Other features might explain the remaining mistakes (alcooholism, diseases...), a V2 model could be designed with more features.
 
 ## 👥 The Team
 
